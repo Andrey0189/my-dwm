@@ -6,6 +6,7 @@
 #### Applied patches:
 - [noborder](https://dwm.suckless.org/patches/noborder/)
 - [pertag](https://dwm.suckless.org/patches/pertag/)
+- window title on the bar uses `SchemesNorm` colors
 
 #### Themes:
 ![themes](/dwm-themes.png)
