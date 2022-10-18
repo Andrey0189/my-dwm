@@ -24,7 +24,7 @@
 
 ## Installation
 ```
-git clone link
+git clone https://github.com/Andrey0189/my-dwm
 cd my-dwm
 sudo chmod +x ./install.sh 
 ./install.sh
