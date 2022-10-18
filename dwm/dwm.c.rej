@@ -1,0 +1,28 @@
+--- dwm.c	2020-05-23 00:20:34.877944603 +0200
++++ dwm.c	2020-06-22 12:49:55.298859682 +0200
+@@ -1566,13 +1616,24 @@ void
+ setmfact(const Arg *arg)
+ {
+ 	float f;
++	unsigned int i;
+ 
+ 	if (!arg || !selmon->lt[selmon->sellt]->arrange)
+ 		return;
+ 	f = arg->f < 1.0 ? arg->f + selmon->mfact : arg->f - 1.0;
+-	if (f < 0.1 || f > 0.9)
++	if (arg->f == 0.0)
++		f = mfact;
++	if (f < 0.05 || f > 0.95)
+ 		return;
+ 	selmon->mfact = f;
++	for(i=0; i<LENGTH(tags); ++i)
++		if(selmon->tagset[selmon->seltags] & 1<<i)
++			selmon->pertag->mfacts[i+1] = f;
++
++	if(selmon->pertag->curtag == 0)
++	{
++		selmon->pertag->mfacts[0] = f;
++	}
+ 	arrange(selmon);
+ }
+ 
