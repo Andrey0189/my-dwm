@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd ~/dwm
+
+make -j4 
+make install
+
+killall dwm

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#picom -b --vsync --experimental-backends
+#feh --bg-scale ~/path/to/img.png
+#setxkbmap us,ru -option 'grp:shift_alt_toggle'
+
+# Statusbar loop
+while true; do
+    ubar
+    sleep 1s    # Update time every second
+done &
+
+# relaunch DWM
+while true; do
+    # Log stderror to a file 
+    ~/.local/bin/dwm 2> ~/.dwm.log
+    # No error logging
+    #dwm >/dev/null 2>&1
+done

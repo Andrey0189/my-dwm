@@ -1,1 +1,12 @@
-e
+#!/bin/sh
+
+SEP="┇"
+
+#RAM_USAGE=$( free -h | awk '/Mem:/ { printf(" %5s/%s \n", $3, $2) }' )
+#CPU_USAGE=$( mpstat 1 1 | awk '/Av/ {printf(" %s% \n", $(NF-9))}' )
+LANG=$( xset -q|grep LED| awk '{ if (substr ($10,5,1) == 1) print "[RU]"; else print "[EN]"; }' )
+DATE_TIME=$(date +" %d.%m  $SEP   %H:%M")
+BATT=$(cat /sys/class/power_supply/BAT0/capacity)
+
+xsetroot -rv -name " $SEP  $LANG  $SEP   $BATT%  $SEP  $DATE_TIME  "
+
