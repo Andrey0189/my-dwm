@@ -19,13 +19,13 @@
 
 ## Pre-installation
 
+- Clone the repository `git clone https://github.com/Andrey0189/my-dwm`
 - Add `export PATH="${HOME}/.local/bin:${PATH}"` to your `~/.bash_profile`
 - Rename `dwm/config.dark.h` to `dwm/config.h` if you prefer dark theme.
 - Edit `dwm/config.h` to change default terminal, fonts, window rules, keybinds etc.
 
 ## Installation
 ```
-git clone https://github.com/Andrey0189/my-dwm
 cd my-dwm
 sudo chmod +x ./install.sh 
 ./install.sh
