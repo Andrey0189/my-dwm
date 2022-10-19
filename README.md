@@ -20,7 +20,6 @@
 ## Pre-installation
 
 - Add `export PATH="${HOME}/.local/bin:${PATH}"` to your `~/.bash_profile`
-- Edit `scrpits/startdwm` to change startup commands.
 - Rename `dwm/config.dark.h` to `dwm/config.h` if you prefer dark theme.
 - Edit `dwm/config.h` to change default terminal, fonts, window rules, keybinds etc.
 
