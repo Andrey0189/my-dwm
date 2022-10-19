@@ -38,7 +38,7 @@ exec startdwm
 ```
 
 ## Post-installation
-- Set DWM directory in the `scripts/restartdwm` for proper restart.
-- Change autostart commands in the `scripts/startdwm`.
-- Change bar output in `scripts/ubar`.
+- Set DWM directory in the `~/.local/bin/restartdwm` for proper restart.
+- Change autostart commands in the `~/.local/bin/startdwm`.
+- Change bar output in `~/.local/bin/ubar`.
 - Enjoy!
